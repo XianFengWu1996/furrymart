@@ -1,0 +1,176 @@
+{
+  "1": {
+    "name": "Premium grain-free dog food",
+    "description": "A high-quality, all-natural dog food that is free of grains and fillers.",
+    "category": "Pet food",
+    "image": "https://example.com/images/dog_food.jpg",
+    "price": 50,
+    "availability": 50,
+    "weight": {
+      "value": 20,
+      "unit": "pounds"
+    },
+    "dimensions": {
+      "length": 18,
+      "width": 12,
+      "height": 4,
+      "unit": "inches"
+    },
+    "reviews": {
+      "rating": 4.8,
+      "count": 100
+    },
+    "sales": {
+      "quantity": 500,
+      "revenue": 25000
+    },
+    "customers": {
+      "also_bought": ["dog toys", "grooming products"]
+    }
+  },
+  "2": {
+    "name": "Catnip-filled mouse toy for cats",
+    "description": "A fun and interactive toy for cats filled with high-quality catnip.",
+    "category": "Cat toys",
+    "image": "https://example.com/images/cat_toy.jpg",
+    "price": 5,
+    "availability": 200,
+    "weight": {
+      "value": 0.5,
+      "unit": "ounces"
+    },
+    "dimensions": {
+      "length": 3,
+      "width": 1,
+      "height": 1,
+      "unit": "inches"
+    },
+    "reviews": {
+      "rating": 4.5,
+      "count": 50
+    },
+    "sales": {
+      "quantity": 1000,
+      "revenue": 5000
+    },
+    "customers": {
+      "also_bought": ["cat food", "litter"]
+    }
+  },
+  "3": {
+    "name": "Self-grooming brush for cats",
+    "description": "A grooming brush for cats that allows them to groom themselves.",
+    "category": "Cat grooming",
+    "image": "https://example.com/images/cat_brush.jpg",
+    "price": 10,
+    "availability": 100,
+    "weight": {
+      "value": 0.2,
+      "unit": "ounces"
+    },
+    "dimensions": {
+      "length": 4,
+      "width": 3,
+      "height": 2,
+      "unit": "inches"
+    },
+    "reviews": {
+      "rating": 4.2,
+      "count": 30
+    },
+    "sales": {
+      "quantity": 200,
+      "revenue": 2000
+    },
+    "customers": {
+      "also_bought": ["cat toys", "litter"]
+    }
+  },
+  "5": {
+    "name": "Interactive puzzle feeder for dogs",
+    "description": "A puzzle feeder for dogs that challenges their problem-solving skills.",
+    "category": "Dog toys",
+    "image": "https://example.com/images/dog_puzzle.jpg",
+    "price": 30,
+    "availability": 50,
+    "weight": {
+      "value": 2,
+      "unit": "pounds"
+    },
+    "dimensions": {
+      "length": 10,
+      "width": 10,
+      "height": 2,
+      "unit": "inches"
+    },
+    "reviews": {
+      "rating": 4.6,
+      "count": 25
+    },
+    "sales": {
+      "quantity": 150,
+      "revenue": 4500
+    },
+    "customers": {
+      "also_bought": ["dog food", "grooming products"]
+    }
+  },
+  "6": {
+    "name": "Sisal scratching post for cats",
+    "description": "A sturdy and durable scratching post for cats made of natural sisal.",
+    "category": "Cat furniture",
+    "image": "https://example.com/images/cat_scratcher.jpg",
+    "price": 40,
+    "availability": 30,
+    "weight": {
+      "value": 8,
+      "unit": "pounds"
+    },
+    "dimensions": {
+      "length": 18,
+      "width": 12,
+      "height": 30,
+      "unit": "inches"
+    },
+    "reviews": {
+      "rating": 4.9,
+      "count": 40
+    },
+    "sales": {
+      "quantity": 120,
+      "revenue": 4800
+    },
+    "customers": {
+      "also_bought": ["cat food", "litter"]
+    }
+  },
+  "7": {
+    "name": "Calming diffuser for dogs",
+    "description": "A diffuser for dogs that releases pheromones to help reduce anxiety and promote relaxation.",
+    "category": "Dog wellness",
+    "image": "https://example.com/images/dog_diffuser.jpg",
+    "price": 25,
+    "availability": 100,
+    "weight": {
+      "value": 1,
+      "unit": "pounds"
+    },
+    "dimensions": {
+      "length": 4,
+      "width": 4,
+      "height": 6,
+      "unit": "inches"
+    },
+    "reviews": {
+      "rating": 4.5,
+      "count": 20
+    },
+    "sales": {
+      "quantity": 50,
+      "revenue": 1250
+    },
+    "customers": {
+      "also_bought": ["dog food", "toys"]
+    }
+  }
+}
