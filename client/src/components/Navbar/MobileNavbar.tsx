@@ -12,6 +12,7 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { FaPaw } from 'react-icons/fa';
 import { BiChat } from 'react-icons/bi';
 import gsap from 'gsap';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 const MobileNavbar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -56,6 +57,13 @@ const MobileNavbar = () => {
     tl.current.reverse();
   };
 
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+
+  useLayoutEffect(() => {
+    if (isDesktop) {
+      handleClose();
+    }
+  }, [isDesktop]);
   return (
     <header className="border-b border-b-blue-100 h-36 w-full flex flex-col lg:hidden">
       <div
@@ -98,7 +106,7 @@ const MobileNavbar = () => {
         ></div>
         <div
           id="overlay--content"
-          className="h-full w-[85%] bg-[#fffafa] z-10 absolute translate-x-[-100%]"
+          className="h-full w-full md:w-[85%] bg-[#fffafa] z-10 absolute translate-x-[-100%]"
         >
           <MobileNavButton text="Sign In" Icon={FaPaw} />
 
