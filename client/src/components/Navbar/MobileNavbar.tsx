@@ -2,38 +2,58 @@ import { GrCart } from 'react-icons/gr';
 import {
   StoreLocation,
   Search,
-  MobileNavItem,
-  MobileNavButton,
   NavLogo,
+  MobileNavButton,
+  MobileNavItem,
 } from '.';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
-import { useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { FaPaw } from 'react-icons/fa';
 import { BiChat } from 'react-icons/bi';
+import gsap from 'gsap';
+
 const MobileNavbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const tl = useRef<GSAPTimeline | null>(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      tl.current = gsap
+        .timeline({
+          defaults: {
+            duration: 1,
+          },
+        })
+        .to('#overlay--content', {
+          x: 0,
+          duration: 0.5,
+        })
+        .fromTo(
+          '#overlay--bg',
+          { opacity: 0 },
+          { opacity: 0.6, duration: 0.2 },
+          0.3
+        )
+
+        .pause();
+    });
+    return () => ctx.revert(); // cleanup
+  }, []);
 
   const handleOpen = () => {
     setOpen(true);
-    const nav = document.getElementById('nav--mobile');
-    const overlay = document.getElementById('nav--overlay');
-    if (!nav || !overlay) return;
-
-    nav.style.transform = 'translateX(0)';
-    overlay.style.display = 'block';
-    overlay.style.opacity = '0.8';
+    // show the menu
+    if (!tl.current) return;
+    tl.current.play();
   };
 
   const handleClose = () => {
     setOpen(false);
-    const nav = document.getElementById('nav--mobile');
-    const overlay = document.getElementById('nav--overlay');
-    if (!nav || !overlay) return;
 
-    nav.style.transform = 'translateX(-100%)';
-    overlay.style.opacity = '0';
-    overlay.style.display = 'none';
+    // hide the mennu
+    if (!tl.current) return;
+    tl.current.reverse();
   };
 
   return (
@@ -69,15 +89,16 @@ const MobileNavbar = () => {
 
       <div
         id="overlay--wrapper"
-        className="h-[calc(100%-51.5px)] w-full absolute bottom-0 hidden"
+        className="h-[calc(100%-51.5px)] w-full absolute bottom-0 "
       >
         <div
-          id="nav--overlay"
-          className="h-full w-full bg-[#000] opacity-80 z-0 absolute hidden"
+          id="overlay--bg"
+          className="h-full w-full bg-[#000] opacity-80 z-0 absolute"
+          onClick={handleClose}
         ></div>
         <div
-          id="nav--mobile"
-          className="h-full w-[85%] bg-[#fffafa] z-10 absolute transition-all duration-500 translate-x-[-100%]"
+          id="overlay--content"
+          className="h-full w-[85%] bg-[#fffafa] z-10 absolute translate-x-[-100%]"
         >
           <MobileNavButton text="Sign In" Icon={FaPaw} />
 

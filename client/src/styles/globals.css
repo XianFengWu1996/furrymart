@@ -22,4 +22,5 @@ Bright purple: #FF00FF */
 
 html {
   background-color: #fffafa;
+  overflow-x: hidden;
 }

@@ -22,7 +22,10 @@ export const MobileNavButton = ({
   styles,
 }: NavButton) => {
   return (
-    <div role={'button'} className="flex items-center justify-center mt-10">
+    <div
+      role={'button'}
+      className="flex items-center justify-center mt-10 mb-5"
+    >
       <button
         type="button"
         className="py-2 border-[#8504ED] border-[2px] rounded-lg flex items-center min-w-[13rem] justify-center text-[0.85rem] font-bold"
