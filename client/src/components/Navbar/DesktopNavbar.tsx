@@ -8,6 +8,7 @@ import {
   NavLogo,
   DesktopNavItem,
 } from '.';
+import { CartButton } from './NavButtons';
 
 const DesktopNavbar = () => {
   return (
@@ -20,7 +21,7 @@ const DesktopNavbar = () => {
         <div className="hidden lg:flex items-center ">
           <StackNavButton Icon={FaPaw} text="Sign In" />
           <StackNavButton Icon={BiChat} text="24/7 Help" />
-          <GrCart className="text-2xl mx-5" />
+          <CartButton />
         </div>
 
         <GrCart className="text-2xl mx-5 lg:hidden" />

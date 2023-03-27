@@ -1,4 +1,3 @@
-import { GrCart } from 'react-icons/gr';
 import {
   StoreLocation,
   Search,
@@ -13,6 +12,7 @@ import { FaPaw } from 'react-icons/fa';
 import { BiChat } from 'react-icons/bi';
 import gsap from 'gsap';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { CartButton } from './NavButtons';
 
 const MobileNavbar = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -87,9 +87,7 @@ const MobileNavbar = () => {
           <NavLogo />
         </div>
 
-        <div className="mx-5">
-          <GrCart className="text-2xl" />
-        </div>
+        <CartButton />
       </div>
       <Search />
 
