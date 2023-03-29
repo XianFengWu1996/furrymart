@@ -26,18 +26,21 @@ const MobileNavbar = () => {
             duration: 1,
           },
         })
+        .to('#overlay--wrapper', {
+          display: 'block',
+          duration: 0,
+        }) // hides the navbar when not showing
         .to('#overlay--content', {
           x: 0,
           duration: 0.5,
-        })
+        }) // slide in the content
         .fromTo(
           '#overlay--bg',
           { opacity: 0 },
           { opacity: 0.6, duration: 0.2 },
           0.3
-        )
-
-        .pause();
+        ) // show the overlay
+        .pause(); // start the timeline when it is requested later
     });
     return () => ctx.revert(); // cleanup
   }, []);
@@ -58,7 +61,7 @@ const MobileNavbar = () => {
   };
 
   const isDesktop = useMediaQuery('(min-width: 1024px)');
-
+  1;
   useLayoutEffect(() => {
     if (isDesktop) {
       handleClose();
@@ -95,7 +98,7 @@ const MobileNavbar = () => {
 
       <div
         id="overlay--wrapper"
-        className="h-[calc(100%-51.5px)] w-full absolute bottom-0 "
+        className="h-[calc(100%-51.5px)] w-full absolute bottom-0 hidden "
       >
         <div
           id="overlay--bg"
