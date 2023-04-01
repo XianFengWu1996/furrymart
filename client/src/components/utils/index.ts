@@ -1,3 +1,3 @@
-import { SectionTitle } from './Header';
+import { SectionTitle, SectionTitleWithLink } from './Header';
 
-export { SectionTitle };
+export { SectionTitle, SectionTitleWithLink };

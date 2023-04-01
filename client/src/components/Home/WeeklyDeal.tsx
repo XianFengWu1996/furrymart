@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { SectionTitle } from '../utils';
+import { SectionTitleWithLink } from '../utils';
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
 
 const WeeklyDeal = () => {
   return (
     <>
-      <SectionTitle text="sale of the week" />
+      <SectionTitleWithLink text="sale of the week" linkLabel="Show All" />
 
       <div className="flex items-center overflow-x-scroll">
         <DiscountItem
@@ -139,7 +139,7 @@ export const DiscountItem = (props: DiscountItem) => {
   };
 
   return (
-    <div className=" w-60 h-72 my-5 mr-5  shrink-0">
+    <div className=" w-60 h-72 my-5 mr-5  shrink-0 hover:scale-110 transition-all duration-300 cursor-pointer">
       <div className="h-[50%] relative py-5">
         <Image
           src={'/images/dogfood/dogfood-front.png'}

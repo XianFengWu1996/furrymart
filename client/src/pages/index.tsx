@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import { Navbar } from '@/components/Navbar';
-import { WeeklyDeal, ShopByPet } from '@/components';
+import { WeeklyDeal, ShopByPet, ShopByBrand, Subscribe } from '@/components';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,9 +16,17 @@ export default function Home() {
       </Head>
       <Navbar />
 
-      <main className={`${inter.className} px-5 py-0 lg:px-10 lg:py-7`}>
-        <WeeklyDeal />
-        <ShopByPet />
+      <main className={`${inter.className} py-0  lg:py-7`}>
+        <div className="px-3 lg:px-32">
+          <WeeklyDeal />
+        </div>
+
+        <Subscribe />
+
+        <div className="px-3 lg:px-32">
+          <ShopByPet />
+          <ShopByBrand />
+        </div>
       </main>
     </>
   );

@@ -1,4 +1,2 @@
-import WeeklyDeal from '../components/WeeklyDeal/index';
-import ShopByPet from './ShopByPet';
-
-export { WeeklyDeal, ShopByPet };
+import { ShopByPet, ShopByBrand, Subscribe, WeeklyDeal } from './Home/index';
+export { ShopByPet, ShopByBrand, Subscribe, WeeklyDeal };
